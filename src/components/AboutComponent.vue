@@ -1,10 +1,12 @@
 <template>
-$END$
+  <b-container>
+
+  </b-container>
 </template>
 
 <script>
 export default {
-name: "AboutView"
+  name: "AboutCompontent"
 }
 </script>
 

@@ -4,7 +4,7 @@ $END$
 
 <script>
 export default {
-name: "AboutView"
+name: "CardRow1"
 }
 </script>
 
