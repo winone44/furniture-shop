@@ -10,7 +10,7 @@
         <!--single item-->
         <b-col md="3" class="py-3" v-for="item in $store.state.shopItems" :key="item.shopIdItem">
           <b-card
-              :img-src="item.imageUrl"
+              :img-src="baseUrl + item.imageUrl"
           >
             <b-card-body>
               <b-card-title>{{item.title}}</b-card-title>
@@ -36,7 +36,7 @@ export default {
   components: { NavbarTop, NavbarMain, FooterComponent},
   data() {
     return {
-
+      baseUrl: process.env.VUE_APP_BASE_URL,
     }
   },
   methods: {
@@ -52,6 +52,8 @@ export default {
       this.$store.dispatch('addToCart',payload)
       this.$bvToast.toast(`Add 1 ${payload.title}`, {
         title: 'Card',
+        toaster: 'b-toaster-bottom-right',
+        variant: 'success',
         autoHideDelay: 5000,
         appendToast: false
       })

@@ -5,7 +5,7 @@
         <b-card
             overlay
             title="Best Chair"
-            img-src="/image/ch.png"
+            :img-src="baseUrl + '/image/ch.png'"
             class="tpc"
         >
           <b-card-text>Lorem ipsum dolor.</b-card-text>
@@ -16,7 +16,7 @@
         <b-card
             overlay
             title="Sofa"
-            img-src="/image/sf.png"
+            :img-src="baseUrl + '/image/sf.png'"
             class="tpc"
         >
           <b-card-text>Lorem ipsum dolor.</b-card-text>
@@ -27,7 +27,7 @@
         <b-card
             overlay
             title="Work Desk"
-            img-src="/image/work desk.png"
+            :img-src="baseUrl + '/image/work desk.png'"
             class="tpc"
         >
           <b-card-text>Lorem ipsum dolor.</b-card-text>
@@ -41,7 +41,12 @@
 
 <script>
 export default {
-  name: "CardRow2"
+  name: "CardRow2",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

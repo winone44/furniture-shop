@@ -6,7 +6,7 @@
         <b-col md="4" class="py-3 py-md-0">
           <b-card
               title="CUSTOM MENUS"
-              img-src="/image/c1.png"
+              :img-src="baseUrl + '/image/c1.png'"
               img-class="my-image-class"
               img-height="200px"
               img-width="10px"
@@ -20,7 +20,7 @@
         <b-col md="4" class="py-3 py-md-0">
           <b-card
               title="SMARTEST WAY"
-              img-src="/image/c2.png"
+              :img-src="baseUrl + '/image/c2.png'"
               img-class="my-image-class"
               img-height="200px"
           >
@@ -33,7 +33,7 @@
         <b-col md="4" class="py-3 py-md-0">
           <b-card
               title="USER FRIENDLY"
-              img-src="/image/c3.png"
+              :img-src="baseUrl + '/image/c3.png'"
               img-height="200px"
           >
             <b-card-body>
@@ -49,7 +49,12 @@
 
 <script>
 export default {
-  name: "CardRow1"
+  name: "CardRow1",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

@@ -2,19 +2,19 @@
   <b-container>
     <div class="navbar-top">
       <div class="social-link">
-        <i><img src="/image/twitter.png" alt="" width="30px"></i>
-        <i><img src="/image/facebook.png" alt="" width="30px"></i>
-        <i><img src="/image/google-plus.png" alt="" width="30px"></i>
+        <i><img :src="baseUrl + '/image/twitter.png'" alt="" width="30px"></i>
+        <i><img :src="baseUrl + '/image/facebook.png'" alt="" width="30px"></i>
+        <i><img :src="baseUrl + '/image/google-plus.png'" alt="" width="30px"></i>
       </div>
       <div class="logo">
         <router-link :to="{ name: 'home'}" style="text-decoration: none; color: black"><h3>FURNITURE</h3></router-link>
       </div>
       <div class="icons">
-        <div><i><img src="/image/search.png" alt="" width="20px"></i></div>
-        <div><i><img src="/image/heart.png" alt="" width="20px"></i></div>
+        <div><i><img :src="baseUrl + '/image/search.png'" alt="" width="20px"></i></div>
+        <div><i><img :src="baseUrl + '/image/heart.png'" alt="" width="20px"></i></div>
         <router-link :to="{ name: 'cart'}">
           <div class="shopping-cart">
-            <i><img src="/image/shopping-cart.png" alt="" width="25px"></i>
+            <i><img :src="baseUrl + '/image/shopping-cart.png'" alt="" width="25px"></i>
             <div v-show="$store.state.cartItems.length > 0" class="cart-items">{{ $store.state.cartItems.length }}</div>
           </div>
         </router-link>
@@ -25,7 +25,12 @@
 
 <script>
 export default {
-  name: "NavbarTop"
+  name: "NavbarTop",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
     <b-row style="margin-top:50px">
       <b-col md="6" class="py-3 py-md-0">
         <b-card
-            img-src="/image/mapa.png"
+            :img-src="baseUrl + '/image/mapa.png'"
             overlay
         >
         </b-card>
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name: "ContactComponent"
+  name: "ContactComponent",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

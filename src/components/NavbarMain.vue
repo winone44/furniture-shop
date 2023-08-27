@@ -4,8 +4,8 @@
       <b-container>
         <b-navbar-toggle target="nav-collapse">
           <template #default="{ expanded }">
-            <span v-if="expanded"><i><img src="/image/menu.png" alt="" width="30px"> </i></span>
-            <span v-else><i><img src="/image/menu.png" alt="" width="30px"> </i></span>
+            <span v-if="expanded"><i><img :src="baseUrl + '/image/menu.png'" alt="" width="30px"> </i></span>
+            <span v-else><i><img :src="baseUrl + '/image/menu.png'" alt="" width="30px"> </i></span>
           </template>
         </b-navbar-toggle>
 
@@ -33,7 +33,12 @@
 
 <script>
 export default {
-  name: "NavbarMain"
+  name: "NavbarMain",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

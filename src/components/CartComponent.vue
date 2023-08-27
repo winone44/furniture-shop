@@ -13,7 +13,7 @@
             <SingleItemComponent
                 v-for="cartItem in $store.state.cartItems"
                 :key="cartItem.shopIdItem"
-                :imageUrl="cartItem.imageUrl"
+                :imageUrl="baseUrl + cartItem.imageUrl"
                 :color="cartItem.color"
                 :title="cartItem.title"
                 :price="cartItem.price"
@@ -55,7 +55,12 @@ import CreditCardsInfoComponent from "@/components/Cart/CreditCardsInfoComponent
 import SummaryComponent from "@/components/Cart/SummaryComponent";
 export default {
   name: "CartComponent",
-  components: {SummaryComponent, CreditCardsInfoComponent, ExpectedShippingDeliveryComponent, SingleItemComponent}
+  components: {SummaryComponent, CreditCardsInfoComponent, ExpectedShippingDeliveryComponent, SingleItemComponent},
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 

@@ -65,7 +65,7 @@ export default new Vuex.Store({
     ],
     cartItems: [
       {
-        shopIdItem: 100,
+        shopIdItem: '100',
         imageUrl: '/image/card1.png',
         color: 'brown',
         title: 'Best Sofa',
@@ -73,7 +73,7 @@ export default new Vuex.Store({
         stock: 5
       },
       {
-        shopIdItem: 106,
+        shopIdItem: '106',
         imageUrl: '/image/card7.png',
         color: 'brown',
         title: 'Table Chair',

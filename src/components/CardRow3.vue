@@ -4,7 +4,7 @@
     <b-row style="margin-top: 50px;">
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card1.png"
+          :img-src="baseUrl + '/image/card1.png'"
         >
           <b-card-body>
             <b-card-title>Best Sofa</b-card-title>
@@ -15,7 +15,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card2.png"
+          :img-src="baseUrl + '/image/card2.png'"
         >
           <b-card-body>
             <b-card-title>New Sofa</b-card-title>
@@ -26,7 +26,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card3.png"
+          :img-src="baseUrl + '/image/card3.png'"
         >
           <b-card-body>
             <b-card-title>New Chair</b-card-title>
@@ -37,7 +37,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card4.png"
+          :img-src="baseUrl + '/image/card4.png'"
         >
           <b-card-body>
             <b-card-title>Modern Chair</b-card-title>
@@ -48,7 +48,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card5.png"
+          :img-src="baseUrl + '/image/card5.png'"
         >
           <b-card-body>
             <b-card-title>Best Sofa</b-card-title>
@@ -59,7 +59,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card6.png"
+          :img-src="baseUrl + '/image/card6.png'"
         >
           <b-card-body>
             <b-card-title>Sofa Chair</b-card-title>
@@ -70,7 +70,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card7.png"
+          :img-src="baseUrl + '/image/card7.png'"
         >
           <b-card-body>
             <b-card-title>Table Chair</b-card-title>
@@ -81,7 +81,7 @@
       </b-col>
       <b-col md="3" class="py-3">
         <b-card
-          img-src="/image/card8.png"
+          :img-src="baseUrl + '/image/card8.png'"
         >
           <b-card-body>
             <b-card-title>Hanging Chair</b-card-title>
@@ -96,7 +96,12 @@
 
 <script>
 export default {
-  name: "CardRow3"
+  name: "CardRow3",
+  data() {
+    return {
+      baseUrl: process.env.VUE_APP_BASE_URL,
+    }
+  }
 }
 </script>
 
